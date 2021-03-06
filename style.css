@@ -1,0 +1,55 @@
+body * {
+  font-size: 1.4rem;
+}
+
+body {
+  background: #2c3e50;
+  color: #ccc;
+}
+a {
+  color: #ccc;
+}
+a:hover {
+  text-decoration: none;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 60px;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  max-width: 1160px;
+  padding: 1rem;
+  height: auto;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+.header, .footer {
+  grid-column: 1/3;
+  text-align: center;
+}
+h1 {
+  font-size: 3rem;
+}
+
+.column textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  height: auto;
+  min-height: 400px;
+  max-height: 600px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+#output {
+  white-space: break-spaces;
+}
