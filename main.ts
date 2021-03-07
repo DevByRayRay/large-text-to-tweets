@@ -1,5 +1,5 @@
 import './style.css'
-import * as tweetSplitter from 'twitter-splitter'
+const tweetSplitter = require('twitter-splitter')
 
 const inputTxt : HTMLTextAreaElement = document.querySelector('#inputText')
 const outputTxt : HTMLDivElement = document.querySelector('#output')
@@ -27,9 +27,7 @@ generate.addEventListener('click', function() {
   })
   console.log("🚀 ~ file: main.ts ~ line 21 ~ filtered ~ filtered", filtered)
 
-  const split = filtered.map(string => {
-    return tweetSplitter(string, 276, '')
-  })
+  const split = filtered.map((string) => tweetSplitter(string, 276, ''))
 
   const flat = ([]).concat(...split)
 
