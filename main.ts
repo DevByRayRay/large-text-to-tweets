@@ -1,5 +1,5 @@
 import './style.css'
-const tweetSplitter = require('twitter-splitter')
+import tweetSplitter from 'twitter-splitter'
 
 const inputTxt : HTMLTextAreaElement = document.querySelector('#inputText')
 const outputTxt : HTMLDivElement = document.querySelector('#output')
