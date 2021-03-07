@@ -1,55 +1,113 @@
+body {
+	margin: 0;
+}
 body * {
-  font-size: 1.4rem;
+	font-size: 1.2rem;
 }
 
 body {
-  background: #2c3e50;
-  color: #ccc;
+	background: #2c3e50;
+	color: #ccc;
 }
 a {
-  color: #ccc;
+	color: #ccc;
 }
 a:hover {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin-top: 60px;
+	font-family: Avenir, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .container {
-  display: grid;
-  width: 100%;
-  max-width: 1160px;
-  padding: 1rem;
-  height: auto;
-  margin: 0 auto;
-  grid-template-columns: 1fr 1fr;
-  gap: 2em;
+	display: grid;
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	grid-template-columns: 4fr 4fr;
+	overflow: hidden;
 }
 
-.header, .footer {
-  grid-column: 1/3;
-  text-align: center;
+.header,
+.footer {
+	text-align: center;
+}
+.header {
+}
+.footer {
+	padding: 1rem;
+	border-top: 1px solid #ccc;
 }
 h1 {
-  font-size: 3rem;
+	font-size: 2rem;
 }
-
+.column {
+	display: grid;
+	grid-template-rows: 1fr 10fr 1fr;
+	grid-template-columns: 1fr;
+}
+.column--input {
+	grid-template-rows: 10fr 1fr;
+}
+.column--output {
+	padding: 0 2rem;
+	overflow: auto;
+}
 .column textarea {
-  width: 100%;
-  max-width: 100%;
-  min-width: 100%;
-  height: auto;
-  min-height: 400px;
-  max-height: 600px;
-  padding: 1rem;
-  box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	height: auto;
+	box-sizing: border-box;
 }
 
 #output {
-  white-space: break-spaces;
+	white-space: break-spaces;
+	padding: 2rem;
+	border: 1px solid #fff;
+}
+
+.tweet {
+	display: grid;
+	grid-template-columns: 48px 1fr;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.tweet__profile {
+	max-width: 100%;
+	border-radius: 50%;
+}
+.tweet__content {
+	padding-top: 0.6rem;
+	padding-bottom: 2rem;
+	line-height: 1.6em;
+	position: relative;
+	border-bottom: 1px solid #1e2b3a;
+}
+.tweet__header {
+	display: flex;
+	justify-content: space-between;
+}
+.tweet__header em {
+	margin-right: 1rem;
+}
+
+.tweet__content:before {
+	content: '';
+	display: block;
+	background: #ccc;
+	width: 2px;
+	height: 100%;
+	position: absolute;
+	top: 46px;
+	left: -41px;
+	z-index: -1;
+}
+
+.tweet:last-child .tweet__content:before {
+	height: 0;
 }
